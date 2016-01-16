@@ -6,3 +6,82 @@ body {
 a {
   color: #00B7FF;
 }
+
+html {
+    width:100%;
+    height:100%;
+}
+body {
+    width:100%;
+    height:100%;
+    margin:0px;
+    position:relative;
+}
+#header {
+    position:absolute;
+    width:70%;
+    left:15%;
+}
+#title {
+    text-align:center;
+}
+.sidebar-wrapper {
+    position:absolute;
+    height:85%;
+    width:20%;
+    top:10%;
+}
+#left {
+    left:4%;
+}
+#right {
+    left:75%;
+}
+.sidebar-content {
+   position:absolute;
+    border-style:solid;
+    border-color:black;
+    border-width:2px;
+    height:90%;
+    width:87%;
+    top:8%; 
+}
+#browse {
+    left:6%;
+}
+#key {
+    left:6%;
+}
+#actions {
+    max-height:500px;
+}
+#wrapper {
+    position:absolute;
+    max-width:45%;
+    max-height:45%;
+    top:50%;
+    left:50%;
+    overflow:visible;
+}
+#drumset {
+    position:relative;
+    max-width:100%;
+    max-height:100%;
+    margin-top:-50%;
+    margin-left:-50%;
+}
+
+#bass{
+	display: none;
+	position: absolute;
+	top: 100px;
+	left: 0;
+	height: 50%;
+}
+
+#drum{
+	display: none;
+	position: absolute; 
+	top: 500px; 
+	left: 70px;
+}
