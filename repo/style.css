@@ -8,6 +8,27 @@ body {
     margin:0px;
     position:relative;
 }
+#header {
+    position:absolute;
+    background-color: blue;
+    left:45%;
+    /*margin-left:500px;*/
+}
+#sidebar-left {
+    position:absolute;
+    background-color: pink;
+    top:10%;
+    left:8%;
+}
+#sidebar-right {
+    position:absolute;
+    background-color: orange;
+    top:10%;
+    left:80%;
+}
+#actions {
+    max-height:500px;
+}
 #wrapper {
     position:absolute;
     max-width:45%;
