@@ -6,12 +6,13 @@ $(document).ready(function() {
 	var audio3 = new Audio('javascripts/snare.wav')
 
 	Myo.on('fist', function(){
-	    // audio.play();
+	    audio3.play();
 	    this.vibrate();
+	    $('#bass').css("display", "block");
 	});
 
 	Myo.on('wave_in', function() {
-		audio3.play();
+		audio1.play();
 	})
 
 	Myo.on('wave_out', function() {
