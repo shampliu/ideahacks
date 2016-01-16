@@ -1,0 +1,22 @@
+body{
+
+}
+
+h1{
+
+}
+
+#wrapper{
+	background-image: url("http://learntoplaydrumsfromtoday.com/wp-content/uploads/2015/06/Drum_kit_illustration.png");
+	height: 100%;
+	background-size: cover;
+}
+
+#bass{
+	display: none;
+
+}
+
+#drum{
+	display: none;
+}

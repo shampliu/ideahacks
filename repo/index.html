@@ -1,0 +1,33 @@
+<!doctype html>
+
+<html>
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8"  />
+	<meta name="viewport" content="width=device-width">
+	<title>ideahacks 2016</title>
+	<link rel="stylesheet" type="text/css" href="style.css" />
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+</head>
+
+<body>
+	<div id="header">
+		<h1>myoband</h1>
+	</div>
+	<div id="wrapper">
+		<div id="pics">
+			<img src="https://download.manycam.com/effects/get?f=l&i=8684&v=1.00" id="bass">
+			<img src="https://s-media-cache-ak0.pinimg.com/736x/d2/b4/80/d2b480bcd8f334606f554ab4cb1f7d77.jpg" id="drum">
+		</div>
+	</div>
+	<script type="text/javascript">
+		$(document).ready( function(){
+			// depends on each instrument
+			$("body").on('mouseenter', function(){
+				$('#bass').show();
+			}).on('mouseleave', function(){
+				$('#bass').hide();
+			});;
+		});
+	</script>
+</body>
+</html>
