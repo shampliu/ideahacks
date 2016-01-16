@@ -1,0 +1,48 @@
+.inner {
+	font-family: 'Lato', sans-serif;
+	z-index: 2;
+	position: relative;
+	margin: 0 auto;
+	display: block;
+	text-align: center;
+	width: 300px;
+	/*height: 150px;*/
+	padding: 20px;
+	
+	background-color: whitesmoke;
+	position: relative;
+  	top: 50%;
+  	transform: translateY(-50%);
+}
+
+.inner h1 {
+	font-weight: 700;
+	font-size: 2.8em;
+	margin-bottom: 20px;
+}
+
+.inner a {
+	background-color: black;
+	color: white;
+	margin: 0 auto;
+	width: 50%;
+	padding: 5px 7px;
+	transition, background-size 350ms ease-in-out
+	-webkit-transition: all 350ms ease-in-out;
+	-moz-transition: all 350ms ease-in-out;
+	-ms-transition: all 350ms ease-in-out;
+	-o-transition: all 350ms ease-in-out;
+	transition: all 350ms ease-in-out;
+}
+
+.inner a:hover {
+	transition, background-size 350ms ease-in-out
+	-webkit-transition: all 350ms ease-in-out;
+	-moz-transition: all 350ms ease-in-out;
+	-ms-transition: all 350ms ease-in-out;
+	-o-transition: all 350ms ease-in-out;
+	transition: all 350ms ease-in-out;
+	background-color: whitesmoke;
+	color: black;
+	border: 1px solid black;
+}

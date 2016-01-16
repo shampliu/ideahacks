@@ -1,5 +1,4 @@
 $(document).ready(function() {
-	console.log('yes');
 	Myo.connect('com.myojs.main');
 
 	var audio = new Audio('javascripts/arctic.mp3');
@@ -7,8 +6,6 @@ $(document).ready(function() {
 	var audio3 = new Audio('javascripts/snare.wav')
 
 	Myo.on('fist', function(){
-
-	    console.log('Hello Myo!');
 	    // audio.play();
 	    this.vibrate();
 	});
