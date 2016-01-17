@@ -1,25 +1,25 @@
 var express = require('express');
 var router = express.Router();
+var request = require('request');
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  res.render('index');
+	res.render('index');
 });
 
 router.get('/main', function(req, res, next) {
-  res.render('main');
+
+	// var body;
+
+	// var url = "http://192.168.1.148/";
+
+	// request(url, function(err, resp, body) {
+	//  console.log(body);
+	// });
+
+	res.render('main');
 });
 
-router.get('/main2', function(req, res, next) {
-  res.render('main2');
-});
 
-router.get('/main3', function(req, res, next) {
-  res.render('main3');
-});
-
-router.get('/main4', function(req, res, next) {
-  res.render('main4');
-});
 
 module.exports = router;
