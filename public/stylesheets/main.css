@@ -138,18 +138,16 @@
 .feed {
     text-align: center;
     display: block;
-    height: 400px;
+    height: 300px;
     overflow: auto;
 }
 
 .feed div {
     height: 150px;
 /*    border: 2px solid black;*/
-    margin: 50px;
-}
-
-.feed p {
-
+    margin-left: 50px;
+    margin-right: 50px;
+    margin-bottom: 30px;
 }
 
 body {
