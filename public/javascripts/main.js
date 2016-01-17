@@ -41,43 +41,43 @@ $(document).ready(function() {
   var loop1 = new Audio('javascripts/loop1.mp3');
   var currentLoop; 
 
-  function getLoop() {
-      $.ajax({
-        url: 'http://192.168.1.148/',
-        dataType: 'json',
-        success: function (data) {
-         if (data["0"] > 800) {
-          console.log('greater than 800');
-          currentLoop = loop3; 
-        }
-
-        if (data["0"] > 400 ) {
-          console.log('greater than 400');
-          currentLoop = loop2;
-
-        }
-
-        else {
-          console.log('less than 400')
-          currentLoop = loop1;
-        }
-
-        $('#playLoop').on('click', function() {
-          console.log('yes');
-          currentLoop.play();
-        });
-
-        $('#pauseLoop').on('click', function() {
-          currentLoop.pause();
-          currentLoop.currentTime = 0;
-        })
+  // function getLoop() {
+    $.ajax({
+      url: 'http://192.168.1.148/',
+      dataType: 'json',
+      success: function (data) {
+       if (data["0"] > 800) {
+        console.log('greater than 800');
+        currentLoop = loop3; 
       }
-    });
-  }
 
-  getLoop();
+      if (data["0"] > 400 ) {
+        console.log('greater than 400');
+        currentLoop = loop2;
 
-  setTimeout(getLoop, 5000)
+      }
+
+      else {
+        console.log('less than 400')
+        currentLoop = loop1;
+      }
+
+      $('#playLoop').on('click', function() {
+        console.log('yes');
+        currentLoop.play();
+      });
+
+      $('#pauseLoop').on('click', function() {
+        currentLoop.pause();
+        currentLoop.currentTime = 0;
+      })
+    }
+  });
+  // }
+
+  // getLoop();
+
+  // setTimeout(getLoop, 5000)
 
 
 
@@ -155,74 +155,103 @@ $(document).ready(function() {
       switch (String.fromCharCode(event.which)) {
         case "a":
         currentclass["one"].play();
+        prep(1);
+        $('.pad1').css("background-color", "#324D5C");
+        setTimeout(function() {
+         $('.pad1').css("background-color", "white")
+
+       }, 600)
         break;
+        
         case "s":
         currentclass["two"].play();
+        prep(2);
+        $('.pad2').css("background-color", "#46B29D");
+        setTimeout(function() {
+         $('.pad2').css("background-color", "white")
+
+       }, 600)
         break;
         case "d":
         currentclass["three"].play();
+        prep(3);
+        $('.pad3').css("background-color", "#F0CA4D");
+        setTimeout(function() {
+         $('.pad3').css("background-color", "white")
+       }, 600);
         break;
         case "f":
         currentclass["four"].play();
+        prep(4);
+        $('.pad4').css("background-color", "#E37B40");
+        setTimeout(function() {
+         $('.pad4').css("background-color", "white")
+        }, 600)
         break;
         case "g":
         currentclass["five"].play();
+        prep(5);
+        $('.pad5').css("background-color", "#DE5B49");
+        setTimeout(function() {
+         $('.pad5').css("background-color", "white")
+
+       }, 600)
         break;
       }; 
     })
-    
-    Myo.on('fist', function(){
-      currentclass["one"].play();
-      prep(1);
-      $('.pad1').css("background-color", "#324D5C");
-      setTimeout(function() {
-       $('.pad1').css("background-color", "white")
 
-     }, 600)
+ Myo.on('fist', function(){
+  currentclass["one"].play();
+  prep(1);
+  $('.pad1').css("background-color", "#324D5C");
+  setTimeout(function() {
+   $('.pad1').css("background-color", "white")
 
-    });
+ }, 600)
 
-
-    Myo.on('wave_out', function() {
-      currentclass["two"].play();
-
-      prep(2);
-      $('.pad2').css("background-color", "#46B29D");
-      setTimeout(function() {
-       $('.pad2').css("background-color", "white")
-
-     }, 600)
-    })
-    
-    Myo.on('fingers_spread', function(){
-      currentclass["three"].play();
-      prep(3);
-      $('.pad3').css("background-color", "#F0CA4D");
-      setTimeout(function() {
-       $('.pad3').css("background-color", "white")
-
-     }, 600)
-    });
-    
-    Myo.on('wave_in', function() {
-      currentclass["four"].play();
-      prep(4);
-      $('.pad4').css("background-color", "#E37B40");
-      setTimeout(function() {
-       $('.pad4').css("background-color", "white")
-
-     }, 600)
-    })
-    
-    Myo.on('double_tap', function() {
-      prep(5);
-      currentclass["five"].play();
-      $('.pad5').css("background-color", "#DE5B49");
-      setTimeout(function() {
-       $('.pad5').css("background-color", "white")
-
-     }, 600)
-    })
+});
 
 
-  });
+ Myo.on('wave_out', function() {
+  currentclass["two"].play();
+
+  prep(2);
+  $('.pad2').css("background-color", "#46B29D");
+  setTimeout(function() {
+   $('.pad2').css("background-color", "white")
+
+ }, 600)
+})
+
+ Myo.on('fingers_spread', function(){
+  currentclass["three"].play();
+  prep(3);
+  $('.pad3').css("background-color", "#F0CA4D");
+  setTimeout(function() {
+   $('.pad3').css("background-color", "white")
+
+ }, 600)
+});
+
+ Myo.on('wave_in', function() {
+  currentclass["four"].play();
+  prep(4);
+  $('.pad4').css("background-color", "#E37B40");
+  setTimeout(function() {
+   $('.pad4').css("background-color", "white")
+
+ }, 600)
+})
+
+ Myo.on('double_tap', function() {
+  prep(5);
+  currentclass["five"].play();
+  $('.pad5').css("background-color", "#DE5B49");
+  setTimeout(function() {
+   $('.pad5').css("background-color", "white")
+
+ }, 600)
+})
+
+
+});
