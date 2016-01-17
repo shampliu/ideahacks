@@ -93,7 +93,8 @@
   border: 1px solid white;
 }
 
-#launchpad {
+.launchpad {
+  position: relative;
   padding: 20px;
   height: 220px;
   text-align: center;
@@ -101,7 +102,7 @@
   background-color: black;
 }
 
-#launchpad div {
+.launchpad div {
   display: inline-block;
   height: 150px;
   width: 150px;
@@ -114,6 +115,19 @@
   -ms-transition: background-color 150ms ease-in-out;
   -o-transition: background-color 150ms ease-in-out;
   transition: background-color 150ms ease-in-out;
+}
+
+.launchpad div.pad-wrapper {
+    display: inline-block;
+    height: 180px;
+    width: 150px;
+    margin: 5px;
+    background-color: black;
+}
+
+.launchpad p {
+    display: block;
+    color: white;
 }
 
 body {
