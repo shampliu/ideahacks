@@ -23,82 +23,81 @@
 </head>
 
 <body>
-	<h1 id="title"><img src="images/logo.png"></h1>
+	<h1 id="title"><img src="images/logo1.png"></h1>
 
 	<div class="carousel">
 		<div class="launchpad">
 			<div class="pad-wrapper">
-				<div id="pad1"></div>
-				<p>Label 1</p>
+				<div class="pad1"></div>
+				<p>Clap</p>
 			</div>
 			<div class="pad-wrapper">
-				<div id="pad2"></div>
-				<p>Label 2</p>
+				<div class="pad2"></div>
+				<p>Hi-Hat</p>
 			</div>
 			<div class="pad-wrapper">
-				<div id="pad3"></div>
-				<p>Label 3</p>
+				<div class="pad3"></div>
+				<p>Snare</p>
 			</div>
 			<div class="pad-wrapper">
-				<div id="pad4"></div>
-				<p>Label 4</p>
+				<div class="pad4"></div>
+				<p>Maraca</p>
 			</div>
 			<div class="pad-wrapper">
-				<div id="pad5"></div>
-				<p>Label 5</p>
-			</div>
-		</div>
-		<div class="launchpad">
-			<div class="pad-wrapper">
-				<div id="pad1"></div>
-				<p>Label 1</p>
-			</div>
-			<div class="pad-wrapper">
-				<div id="pad2"></div>
-				<p>Label 2</p>
-			</div>
-			<div class="pad-wrapper">
-				<div id="pad3"></div>
-				<p>Label 3</p>
-			</div>
-			<div class="pad-wrapper">
-				<div id="pad4"></div>
-				<p>Label 4</p>
-			</div>
-			<div class="pad-wrapper">
-				<div id="pad5"></div>
-				<p>Label 5</p>
+				<div class="pad5"></div>
+				<p>Cowbell</p>
 			</div>
 		</div>
 		<div class="launchpad">
 			<div class="pad-wrapper">
-				<div id="pad1"></div>
-				<p>Label 1</p>
+				<div class="pad1"></div>
+				<p>Piano C</p>
 			</div>
 			<div class="pad-wrapper">
-				<div id="pad2"></div>
-				<p>Label 2</p>
+				<div class="pad2"></div>
+				<p>Piano D</p>
 			</div>
 			<div class="pad-wrapper">
-				<div id="pad3"></div>
-				<p>Label 3</p>
+				<div class="pad3"></div>
+				<p>Piano E</p>
 			</div>
 			<div class="pad-wrapper">
-				<div id="pad4"></div>
-				<p>Label 4</p>
+				<div class="pad4"></div>
+				<p>Piano F</p>
 			</div>
 			<div class="pad-wrapper">
-				<div id="pad5"></div>
-				<p>Label 5</p>
+				<div class="pad5"></div>
+				<p>Piano G</p>
+			</div>
+		</div>
+		<div class="launchpad">
+			<div class="pad-wrapper">
+				<div class="pad1"></div>
+				<p>Cello C</p>
+			</div>
+			<div class="pad-wrapper">
+				<div class="pad2"></div>
+				<p>Cello D</p>
+			</div>
+			<div class="pad-wrapper">
+				<div class="pad3"></div>
+				<p>Cello E</p>
+			</div>
+			<div class="pad-wrapper">
+				<div class="pad4"></div>
+				<p>Cello F</p>
+			</div>
+			<div class="pad-wrapper">
+				<div class="pad5"></div>
+				<p>Cello G</p>
 			</div>
 		</div>
 	</div>
 	<button id="playLoop">Play Loop</button>
-	<br>
 	<button id="pauseLoop">Pause Loop</button>
 
 	<div class="feed">
-		<h1><img src="images/logo.png"></h1>
+		<h1><img src="images/inspiration.png"></h1>
 		<div id="item1">
 			<iframe width="100%" height="166" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/228547412&amp;color=ff5500&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false"></iframe>
 		</div>
@@ -131,10 +130,10 @@
 					<li class="instruments-icon">3</li>
 					<li class="instruments-icon">4</li> -->
 					<img src="images/fist.png" style="height: 70px">
-					<img src="images/open.png" style="height: 70px">
-					<img src="images/pinch.png" style="height: 70px">
-					<img src="images/wave_in.png" style="height: 70px">
 					<img src="images/wave_out.png" style="height: 70px">
+					<img src="images/open.png" style="height: 70px">
+					<img src="images/wave_in.png" style="height: 70px">
+					<img src="images/pinch.png" style="height: 70px">
 				</ul>
 			</span>
 		</div>
@@ -156,8 +155,8 @@
 	<script>
 		$(document).ready(function(){
 			$('.multiple-items').slick({
-			  infinite: true,
-			  slidesToShow: 5,
+			  infinite: false,
+			  slidesToShow: 3,
 			  slidesToScroll: 1,
 			  arrows: true
 			});
