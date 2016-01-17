@@ -135,6 +135,23 @@
     color: white;
 }
 
+.feed {
+    text-align: center;
+    display: block;
+    height: 400px;
+    overflow: auto;
+}
+
+.feed div {
+    height: 150px;
+/*    border: 2px solid black;*/
+    margin: 50px;
+}
+
+.feed p {
+
+}
+
 body {
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
 }
