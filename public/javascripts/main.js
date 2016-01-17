@@ -77,7 +77,9 @@ $(document).ready(function() {
 	  var class1 = {
 	  	"one" : audio1_1,
 	  	"two" : audio1_2,
-	  	"three" : audio1_3
+	  	"three" : audio1_3,
+	  	"four" : audio1_4,
+	  	"five" : audio1_5
 	  }
       
     var currentclass = class1; 
