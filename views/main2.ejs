@@ -1,0 +1,77 @@
+<!doctype html>
+
+<html>
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8"  />
+	<meta name="viewport" content="width=device-width">
+	<title>ideahacks 2016</title>
+	<link rel="stylesheet" type="text/css" href="stylesheets/main.css" />
+	<link href='https://fonts.googleapis.com/css?family=Lato:400,700' rel='stylesheet' type='text/css'>
+	<script src="https://fb.me/react-0.14.6.js"></script>
+  <script src="https://fb.me/react-dom-0.14.6.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.23/browser.min.js"></script>
+</head>
+
+<body>
+<script type="text/babel">
+	var HelloWorld = React.createClass({
+	  render: function() {
+	    return (
+	      <p>
+	        Hello, <input type="text" placeholder="Your name here" />!
+	        It is {this.props.date.toTimeString()}
+	      </p>
+	    );
+	  }
+	});
+
+	setInterval(function() {
+	  ReactDOM.render(
+	    <HelloWorld date={new Date()} />,
+	    document.getElementById('example')
+	  );
+	}, 500);
+	</script>
+
+	<div id="header">
+		<h1 id="title">Beats By Myo</h1>
+	</div>
+	<!-- <div class="sidebar-wrapper" id="left">
+		<h3 id="title">Recent Beats</h3>
+		<div class="sidebar-content" id="browse">
+
+		</div>
+	</div>
+	<div class="sidebar-wrapper" id="right">
+		<h3 id="title">Start Playing!</h3>
+		<div class ="sidebar-content" id="key">
+			<img src="images/actions.png" id="actions">
+		</div>
+	</div>
+	<div id="wrapper">
+		<img src="http://learntoplaydrumsfromtoday.com/wp-content/uploads/2015/06/Drum_kit_illustration.png" id="drumset">
+		<div id="pics">
+			<img src="https://download.manycam.com/effects/get?f=l&i=8684&v=1.00" id="bass"`>
+			<img src="https://s-media-cache-ak0.pinimg.com/736x/d2/b4/80/d2b480bcd8f334606f554ab4cb1f7d77.jpg" id="drum">
+		</div>
+	</div> -->
+
+	<div id="bottom-bar">
+		<div id="show"><h3>Instruments</h3></div>
+		<div id="instruments">
+			<span id="instruments-grid">
+				<ul style="padding: 0;">
+					<a href="/main"><li class="instruments-icon">1</li></a>
+					<a href="/main2"><li class="instruments-icon" id="active">2</li></a>
+					<li class="instruments-icon">3</li>
+					<li class="instruments-icon">4</li>
+				</ul>
+			</span>
+		</div>
+	</div>
+	
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	<script src="javascripts/main.js"></script>
+	<script src="javascripts/myo.js"></script>
+</body>
+</html>

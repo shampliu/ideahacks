@@ -6,16 +6,16 @@
 	<meta name="viewport" content="width=device-width">
 	<title>ideahacks 2016</title>
 	<link rel="stylesheet" type="text/css" href="stylesheets/main.css" />
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+
+	<link href='https://fonts.googleapis.com/css?family=Lato:400,700' rel='stylesheet' type='text/css'>
 </head>
 
 <body>
-	<div id="header">
-		<h1 id="title">MyoBand</h1>
-	</div>
-	<div class="sidebar-wrapper" id="left">
+	<h1 id="title">Beats by Myo</h1>
+	<!-- <div class="sidebar-wrapper" id="left">
 		<h3 id="title">Recent Beats</h3>
 		<div class="sidebar-content" id="browse">
+
 		</div>
 	</div>
 	<div class="sidebar-wrapper" id="right">
@@ -30,23 +30,34 @@
 			<img src="https://download.manycam.com/effects/get?f=l&i=8684&v=1.00" id="bass"`>
 			<img src="https://s-media-cache-ak0.pinimg.com/736x/d2/b4/80/d2b480bcd8f334606f554ab4cb1f7d77.jpg" id="drum">
 		</div>
+	</div> -->
+
+	<span id="launchpad">
+		<div id="pad1">
+		</div>
+		<div id="pad2"></div>
+		<div id="pad3"></div>
+		<div id="pad4"></div>
+		<div id="pad5"></div>
+	</span>
+
+	<div id="bottom-bar">
+		<div id="show"><h3>Instruments</h3></div>
+		<div id="instruments">
+			<span id="instruments-grid">
+				<ul style="padding: 0;">
+					<li class="instruments-icon" id="active">1</li>
+					<a href="/main2"><li class="instruments-icon">2</li></a>
+					<li class="instruments-icon">3</li>
+					<li class="instruments-icon">4</li>
+				</ul>
+			</span>
+		</div>
 	</div>
-	<div id="sidebar">
-		<!-- <img src="fist.png">
-		<img src="open.png">
-		<img src="pinch.png">
-		<img src="wave_in.png">
-		<img src="wave_out.png"> -->
-	</div>
-	<script type="text/javascript">
-		// $(document).ready( function(){
-		// 	// depends on each instrument
-		// 	$("body").on('mouseenter', function(){
-		// 		$('#bass').show();
-		// 	}).on('mouseleave', function(){
-		// 		$('#bass').hide();
-		// 	});;
-		// });
-	</script>
+	
+	
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	<script src="javascripts/main.js"></script>
+	<script src="javascripts/myo.js"></script>
 </body>
 </html>
