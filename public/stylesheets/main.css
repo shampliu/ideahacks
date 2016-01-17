@@ -24,6 +24,11 @@
   transition: all 350ms ease-in-out;
 }
 
+.popup {
+    position: absolute;
+    opacity: 0;
+}
+
 #show {
   text-align: center;
   background-color: white;
