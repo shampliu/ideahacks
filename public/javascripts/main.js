@@ -82,6 +82,24 @@ $(document).ready(function() {
       
     var currentclass = class1; 
 
+    $('button.slick-next.slick-arrow').on('click', function() {
+    	if (currentclass == "class1") {
+    		currentclass = class2;
+    	}
+    	else if (currentclass == "class2") {
+    		currentclass = class3
+    	}
+    })
+
+    $('button.slick-prev.slick-arrow').on('click', function() {
+    	if (currentclass == "class3") {
+    		currentclass = class2;
+    	}
+    	else if (currentclass == "class2") {
+    		currentclass = class1
+    	}
+    })
+
     //Piano Notes
     
     var audio2_1 = new Audio('javascripts/C Piano Note.wav');
