@@ -11,57 +11,32 @@
  * WiFi shield attached
  * Analog inputs attached to pins A0 through A5 (optional)
 
- created 13 July 2010  by dlf (Metodo2 srl)
- modified 31 May 2012  by Tom Igoe
- modified 27 Oct 2015  by Bob Martin
+ created 13 July 2010
+ by dlf (Metodo2 srl)
+ modified 31 May 2012
+ by Tom Igoe
 
  */
 
 #include <SPI.h>
 #include <WiFi101.h>
-#include <Wire.h>
 
 
-
-
-char ssid[] = "IEEE 2.4GHz";      			// your network SSID (name)
-char pass[] = "Ilovesolder";   			// your network password
-int keyIndex = 0;                 		// your network key Index number (needed only for WEP)
-
-
-
+char ssid[] = "yourNetwork";      // your network SSID (name)
+char pass[] = "secretPassword";   // your network password
+int keyIndex = 0;                 // your network key Index number (needed only for WEP)
 
 int status = WL_IDLE_STATUS;
 
 WiFiServer server(80);
 
-void setup() 
-  {
-
-    // STS Led
-    pinMode(13,OUTPUT);
-  
-  
+void setup() {
   //Initialize serial and wait for port to open:
-  Serial.begin(115200);
+  Serial.begin(9600);
   while (!Serial) {
     ; // wait for serial port to connect. Needed for native USB port only
   }
 
-
-  wifi_init();
-
-	
- 
-  
-}
-
-
-
-
-
-void wifi_init(void)
-{
   // check for the presence of the shield:
   if (WiFi.status() == WL_NO_SHIELD) {
     Serial.println("WiFi shield not present");
@@ -79,30 +54,19 @@ void wifi_init(void)
     // wait 10 seconds for connection:
     delay(10000);
   }
-  
-  
   server.begin();
-  
-  //  connected now, so print out the status:
+  // you're connected now, so print out the status:
   printWifiStatus();
-
-
-  
 }
 
 
-
-void loop()
- {
-
- 
+void loop() {
   // listen for incoming clients
-    
   WiFiClient client = server.available();
   if (client) {
     Serial.println("new client");
     // an http request ends with a blank line
-    boolean currentLineIsBlank = false;
+    boolean currentLineIsBlank = true;
     while (client.connected()) {
       if (client.available()) {
         char c = client.read();
@@ -146,10 +110,9 @@ void loop()
 
     // close the connection:
     client.stop();
-    Serial.println("client disconnected");
+    Serial.println("client disonnected");
   }
 }
-
 
 
 void printWifiStatus() {
@@ -168,3 +131,4 @@ void printWifiStatus() {
   Serial.print(rssi);
   Serial.println(" dBm");
 }
+
