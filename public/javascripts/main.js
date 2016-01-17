@@ -41,32 +41,45 @@ $(document).ready(function() {
   var loop1 = new Audio('javascripts/loop1.mp3');
   var currentLoop; 
 
-  $('#playLoop').on('click', function() {
-    console.log('yes');
-    currentLoop.play();
-  });
+  function getLoop() {
+      $.ajax({
+        url: 'http://192.168.1.148/',
+        dataType: 'json',
+        success: function (data) {
+         if (data["0"] > 800) {
+          console.log('greater than 800');
+          currentLoop = loop3; 
+        }
 
-  $.ajax({
-    url: 'http://192.168.1.148/',
-    dataType: 'json',
-    success: function (data) {
-     if (data["0"] > 800) {
-      console.log('greater than 800');
-      currentLoop = loop3; 
-    }
+        if (data["0"] > 400 ) {
+          console.log('greater than 400');
+          currentLoop = loop2;
 
-    if (data["0"] > 400 ) {
-      console.log('greater than 400');
-      currentLoop = loop2;
+        }
 
-    }
+        else {
+          console.log('less than 400')
+          currentLoop = loop1;
+        }
 
-    else {
-      console.log('less than 400')
-      currentLoop = loop1;
-    }
+        $('#playLoop').on('click', function() {
+          console.log('yes');
+          currentLoop.play();
+        });
+
+        $('#pauseLoop').on('click', function() {
+          currentLoop.pause();
+          currentLoop.currentTime = 0;
+        })
+      }
+    });
   }
-});
+
+  getLoop();
+
+  setTimeout(getLoop, 5000)
+
+
 
     //Drum Sounds
 
@@ -76,14 +89,14 @@ $(document).ready(function() {
     var audio1_4 = new Audio('javascripts/kick.wav');
     var audio1_5 = new Audio('javascripts/cowbell.wav');
     
-	  var class1 = {
-	  	"one" : audio1_1,
-	  	"two" : audio1_2,
-	  	"three" : audio1_3,
-	  	"four" : audio1_4,
-	  	"five" : audio1_5
-	  }
-      
+    var class1 = {
+      "one" : audio1_1,
+      "two" : audio1_2,
+      "three" : audio1_3,
+      "four" : audio1_4,
+      "five" : audio1_5
+    }
+
     var currentclass = class1; 
 
     setTimeout(function() {
@@ -141,20 +154,20 @@ $(document).ready(function() {
     $(document).keypress(function(event){
       switch (String.fromCharCode(event.which)) {
         case "a":
-          currentclass["one"].play();
-          break;
+        currentclass["one"].play();
+        break;
         case "s":
-          currentclass["two"].play();
-          break;
+        currentclass["two"].play();
+        break;
         case "d":
-          currentclass["three"].play();
-          break;
+        currentclass["three"].play();
+        break;
         case "f":
-          currentclass["four"].play();
-          break;
+        currentclass["four"].play();
+        break;
         case "g":
-          currentclass["five"].play();
-          break;
+        currentclass["five"].play();
+        break;
       }; 
     })
     
