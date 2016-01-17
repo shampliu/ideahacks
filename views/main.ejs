@@ -6,70 +6,96 @@
 	<meta name="viewport" content="width=device-width">
 	<title>ideahacks 2016</title>
 	<link rel="stylesheet" type="text/css" href="stylesheets/main.css" />
-
 	<link href='https://fonts.googleapis.com/css?family=Lato:400,700' rel='stylesheet' type='text/css'>
+  	<link rel="stylesheet" type="text/css" href="slick/slick.css"/>
+	<!-- <link rel="stylesheet" type="text/css" href="slick/slick-theme.css"/> -->
+	<style type="text/css">
+
+	button.slick-prev.slick-arrow {
+	    background-color: white;
+	    border: none;
+	}
+	button.slick-next.slick-arrow {
+	    background-color: white;
+	    border:none;
+	}
+	</style>
 </head>
 
 <body>
 	<h1 id="title">Beats by Myo</h1>
-	<!-- <div class="sidebar-wrapper" id="left">
-		<h3 id="title">Recent Beats</h3>
-		<div class="sidebar-content" id="browse">
 
-			<div class="browse-item">
-				<h4>Track 1</h4>
+	<div class="carousel">
+		<div class="launchpad">
+			<div class="pad-wrapper">
+				<div id="pad1"></div>
+				<p>Label 1</p>
 			</div>
-			<div class="browse-item">
-				<h4>Track 2</h4>
+			<div class="pad-wrapper">
+				<div id="pad2"></div>
+				<p>Label 2</p>
 			</div>
-			<div class="browse-item">
-				<h4>Track 3</h4>
+			<div class="pad-wrapper">
+				<div id="pad3"></div>
+				<p>Label 3</p>
 			</div>
-			<div class="browse-item">
-				<h4>Track 4</h4>
+			<div class="pad-wrapper">
+				<div id="pad4"></div>
+				<p>Label 4</p>
 			</div>
-			<div class="browse-item">
-				<h4>Track 5</h4>
+			<div class="pad-wrapper">
+				<div id="pad5"></div>
+				<p>Label 5</p>
 			</div>
-			<div class="browse-item">
-				<h4>Track 6</h4>
+		</div>
+		<div class="launchpad">
+			<div class="pad-wrapper">
+				<div id="pad1"></div>
+				<p>Label 1</p>
 			</div>
-			<div class="browse-item">
-				<h4>Track 7</h4>
+			<div class="pad-wrapper">
+				<div id="pad2"></div>
+				<p>Label 2</p>
 			</div>
-			<div class="browse-item">
-				<h4>Track 8</h4>
+			<div class="pad-wrapper">
+				<div id="pad3"></div>
+				<p>Label 3</p>
 			</div>
-			<div class="browse-item">
-				<h4>Track 9</h4>
+			<div class="pad-wrapper">
+				<div id="pad4"></div>
+				<p>Label 4</p>
 			</div>
-			<div class="browse-item">
-				<h4>Track 10</h4>
+			<div class="pad-wrapper">
+				<div id="pad5"></div>
+				<p>Label 5</p>
+			</div>
+		</div>
+		<div class="launchpad">
+			<div class="pad-wrapper">
+				<div id="pad1"></div>
+				<p>Label 1</p>
+			</div>
+			<div class="pad-wrapper">
+				<div id="pad2"></div>
+				<p>Label 2</p>
+			</div>
+			<div class="pad-wrapper">
+				<div id="pad3"></div>
+				<p>Label 3</p>
+			</div>
+			<div class="pad-wrapper">
+				<div id="pad4"></div>
+				<p>Label 4</p>
+			</div>
+			<div class="pad-wrapper">
+				<div id="pad5"></div>
+				<p>Label 5</p>
 			</div>
 		</div>
 	</div>
-	<div class="sidebar-wrapper" id="right">
-		<h3 id="title">Start Playing!</h3>
-		<div class ="sidebar-content" id="key">
-			<img src="images/actions.png" id="actions">
-		</div>
-	</div>
-	<div id="wrapper">
-		<img src="http://learntoplaydrumsfromtoday.com/wp-content/uploads/2015/06/Drum_kit_illustration.png" id="drumset">
-		<div id="pics">
-			<img src="https://download.manycam.com/effects/get?f=l&i=8684&v=1.00" id="bass"`>
-			<img src="https://s-media-cache-ak0.pinimg.com/736x/d2/b4/80/d2b480bcd8f334606f554ab4cb1f7d77.jpg" id="drum">
-		</div>
-	</div> -->
-
-	<span id="launchpad">
-		<div id="pad1">
-		</div>
-		<div id="pad2"></div>
-		<div id="pad3"></div>
-		<div id="pad4"></div>
-		<div id="pad5"></div>
-	</span>
+	<button id="playLoop">Play Loop</button>
+	<br>
+	<button id="pauseLoop">Pause Loop</button>
 
 	<div id="bottom-bar">
 		<div id="show"><h3>Instruments</h3></div>
@@ -84,6 +110,7 @@
 			</span>
 		</div>
 	</div>
+<<<<<<< HEAD
 	
 	
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
@@ -97,5 +124,31 @@
     <img src="images/jasmine.png" id = "image4" class="popup"> 
     <img src="images/jennifer.png" id = "image5" class="popup">
 
+=======
+
+<script type="text/javascript" src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+<script type="text/javascript" src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+<script type="text/javascript" src="slick/slick.min.js"></script>
+	<script>
+		$(document).ready(function(){
+			$('.multiple-items').slick({
+			  infinite: true,
+			  slidesToShow: 5,
+			  slidesToScroll: 1,
+			  arrows: true
+			});
+		  $('.carousel').slick();
+		});
+	</script>
+>>>>>>> e9b853202b132bdd5d27262189978e1fc0701d91
 </body>
 </html>
+
+
+
+
+
+
+
+
+

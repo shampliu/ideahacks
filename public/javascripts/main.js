@@ -29,9 +29,44 @@ function prep(num) {
     }, 800); 
     
 }
+
+
+
 $(document).ready(function() {
 
 	Myo.connect('com.myojs.main');
+    
+    var loop3 = new Audio('javascripts/loop3.mp3');
+	var loop2 = new Audio('javascripts/loop2.mp3');
+	var loop1 = new Audio('javascripts/loop1.mp3');
+	var currentLoop; 
+
+	$('#playLoop').on('click', function() {
+		console.log('yes');
+		currentLoop.play();
+	});
+
+	$.ajax({
+		url: 'http://192.168.1.148/',
+		dataType: 'json',
+		success: function (data) {
+			if (data["0"] > 800) {
+				console.log('greater than 800');
+				currentLoop = loop3; 
+			}
+
+			if (data["0"] > 400 ) {
+				console.log('greater than 400');
+				currentLoop = loop2;
+
+			}
+
+			else {
+				console.log('less than 400')
+				currentLoop = loop1;
+			}
+		}
+	});
     
     //Drum Sounds
    
@@ -39,14 +74,14 @@ $(document).ready(function() {
 	var audio1_2 = new Audio('javascripts/hihat.wav');
 	var audio1_3 = new Audio('javascripts/snare.wav');
     
-     var currentclass; 
-
 	  var class1 = {
 	  	"one" : audio1_1,
 	  	"two" : audio1_2,
 	  	"three" : audio1_3
 	  }
       
+    var currentclass = class1; 
+
     //Piano Notes
     
     var audio2_1 = new Audio('javascripts/C Piano Note.wav');
@@ -78,19 +113,20 @@ $(document).ready(function() {
     }
     
 	Myo.on('fist', function(){
+        currentclass["one"].play();
         prep(1);
-		$('#bass').css("display", "block");
 		$('#pad1').css("background-color", "red");
 		setTimeout(function() {
 			$('#pad1').css("background-color", "white")
             
 		}, 600)
         
-	}, function() {
-
 	});
 
+
 	Myo.on('wave_out', function() {
+        currentclass["two"].play();
+
         prep(2);
 		$('#pad2').css("background-color", "blue");
 		setTimeout(function() {
@@ -100,6 +136,7 @@ $(document).ready(function() {
 	})
     
 	Myo.on('fingers_spread', function(){
+        currentclass["three"].play();
         prep(3);
 		$('#pad3').css("background-color", "green");
 		setTimeout(function() {
@@ -109,6 +146,7 @@ $(document).ready(function() {
 	});
     
     Myo.on('wave_in', function() {
+        currentclass["four"].play();
         prep(4);
 		$('#pad2').css("background-color", "yellow");
 		setTimeout(function() {
@@ -118,6 +156,7 @@ $(document).ready(function() {
 	})
     
     Myo.on('double_tap', function() {
+        currentclass["four"].play();
         prep(5);
 		currentclass["five"].play();
 		$('#pad2').css("background-color", "yellow");
