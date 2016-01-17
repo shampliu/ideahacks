@@ -145,34 +145,43 @@ body {
   text-align:center;
 }
 .sidebar-wrapper {
-  position:absolute;
-  height:85%;
-  width:20%;
-  top:10%;
+
+    position:absolute;
+    height:70%;
+    width:20%;
+    top:10%;
 }
 #left {
-  left:4%;
+    left:2%;
 }
 #right {
-  left:75%;
+    left:78%;
 }
 .sidebar-content {
- position:absolute;
- border-style:solid;
- border-color:black;
- border-width:2px;
- height:90%;
- width:87%;
- top:8%; 
+    position:absolute;
+    height:90%;
+    width:87%;
+    top:8%; 
 }
 #browse {
-  left:6%;
+    left:6%;
+    border:2px solid black;
+    border-radius:5px;
+    overflow:auto;
+}
+.browse-item {
+    border-bottom:1px solid black;
+    height:70px;
+    width:100%;
+}
+h4 {
+    text-align:center;
 }
 #key {
   left:6%;
 }
 #actions {
-  max-height:500px;
+    max-height:470px;
 }
 #wrapper {
   position:absolute;
