@@ -73,11 +73,15 @@ $(document).ready(function() {
 	var audio1_1 = new Audio('javascripts/clap.wav');
 	var audio1_2 = new Audio('javascripts/hihat.wav');
 	var audio1_3 = new Audio('javascripts/snare.wav');
+    var audio1_4 = new Audio('javascripts/maraca.wav');
+    var audio1_5 = new Audio('javascripts/cowbell.wav');
     
 	  var class1 = {
 	  	"one" : audio1_1,
 	  	"two" : audio1_2,
-	  	"three" : audio1_3
+	  	"three" : audio1_3,
+        "four" : audio1_4,
+        "five" : audio1_5
 	  }
       
     var currentclass = class1; 
@@ -166,20 +170,19 @@ $(document).ready(function() {
     Myo.on('wave_in', function() {
         currentclass["four"].play();
         prep(4);
-		$('#pad2').css("background-color", "yellow");
+		$('#pad4').css("background-color", "yellow");
 		setTimeout(function() {
-			$('#pad2').css("background-color", "white")
+			$('#pad4').css("background-color", "white")
 
 		}, 600)
 	})
     
     Myo.on('double_tap', function() {
-        currentclass["four"].play();
         prep(5);
 		currentclass["five"].play();
-		$('#pad2').css("background-color", "yellow");
+		$('#pad5').css("background-color", "purple");
 		setTimeout(function() {
-			$('#pad2').css("background-color", "white")
+			$('#pad5').css("background-color", "white")
 
 		}, 600)
 	})
