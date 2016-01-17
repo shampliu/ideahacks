@@ -73,7 +73,7 @@ $(document).ready(function() {
     var audio1_1 = new Audio('javascripts/clap.wav');
     var audio1_2 = new Audio('javascripts/hihat.wav');
     var audio1_3 = new Audio('javascripts/snare.wav');
-    var audio1_4 = new Audio('javascripts/maraca.wav');
+    var audio1_4 = new Audio('javascripts/kick.wav');
     var audio1_5 = new Audio('javascripts/cowbell.wav');
     
     var class1 = {
@@ -137,6 +137,26 @@ $(document).ready(function() {
       "four" : audio3_4,
       "five" : audio3_5
     }
+
+    $(document).keypress(function(event){
+      switch (String.fromCharCode(event.which)) {
+        case "a":
+          currentclass["one"].play();
+          break;
+        case "s":
+          currentclass["two"].play();
+          break;
+        case "d":
+          currentclass["three"].play();
+          break;
+        case "f":
+          currentclass["four"].play();
+          break;
+        case "g":
+          currentclass["five"].play();
+          break;
+      }; 
+    })
     
     Myo.on('fist', function(){
       currentclass["one"].play();
