@@ -2,6 +2,7 @@
  window_Width = window.innerWidth;
 
  function prep(num) {
+     
   var ind = "#image" + num; 
   console.log(ind);
   image_Element = $(ind);
@@ -106,7 +107,10 @@ $(document).ready(function() {
           currentclass = class2;
         }
         else if (currentclass == class2) {
-          currentclass = class3
+          currentclass = class3;
+        }
+        else if (currentclass == class3 {
+          currentclass = class4;         
         }
       })
 
@@ -116,7 +120,10 @@ $(document).ready(function() {
           currentclass = class2;
         }
         else if (currentclass == class2) {
-          currentclass = class1
+          currentclass = class1;
+        }
+        else if (currentclass == class4) {
+          currentclass = class3;
         }
       })
     }, 5000)
@@ -149,6 +156,16 @@ $(document).ready(function() {
       "three" : audio3_3,
       "four" : audio3_4,
       "five" : audio3_5
+    }
+    
+    var audio4_1 = new Audio('javascripts/wookie.wav');
+    
+    var class4 = {
+      "one" : audio4_1,
+      "two" : audio4_1,
+      "three" : audio4_1,
+      "four" : audio4_1,
+      "five" : audio4_1
     }
 
     $(document).keypress(function(event){
